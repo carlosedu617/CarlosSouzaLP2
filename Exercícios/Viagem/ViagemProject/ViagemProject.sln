@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViagemProject", "ViagemProject\ViagemProject.csproj", "{2D727F2C-28AF-41C4-BFFD-943E6B6A9D90}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViagemForms", "ViagemForms\ViagemForms.csproj", "{D42517A0-1CA8-4C25-B995-5854B7C3AB48}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2D727F2C-28AF-41C4-BFFD-943E6B6A9D90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D727F2C-28AF-41C4-BFFD-943E6B6A9D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D727F2C-28AF-41C4-BFFD-943E6B6A9D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D727F2C-28AF-41C4-BFFD-943E6B6A9D90}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D42517A0-1CA8-4C25-B995-5854B7C3AB48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D42517A0-1CA8-4C25-B995-5854B7C3AB48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D42517A0-1CA8-4C25-B995-5854B7C3AB48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D42517A0-1CA8-4C25-B995-5854B7C3AB48}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
