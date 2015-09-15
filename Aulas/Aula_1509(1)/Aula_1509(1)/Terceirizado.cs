@@ -12,5 +12,6 @@ namespace Aula_1509_1_
         public string CPF { get; set; }
         public DateTime DataNasc { get; set; }
         public string Matricula { get; set; }
+        public string CNPJ { get; set; }
     }
 }
