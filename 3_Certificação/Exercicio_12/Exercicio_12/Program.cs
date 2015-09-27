@@ -10,6 +10,7 @@ namespace Exercicio_12
     {
         static void Main(string[] args)
         {
+          
             Console.Write("Informe a quantidade de TERCEIRIZADOS: ");
             int qtdTerceirizados = int.Parse(Console.ReadLine());
             List<Terceirizado> Terceirizados = new List<Terceirizado>();
@@ -72,16 +73,16 @@ namespace Exercicio_12
             double salarioGerente = 0;
             foreach (Empregado empregado in Empregados)
             {
-                salarioEmpregado += empregado.Salario + empregado.ValeAlimentacao - empregado.Aliquota;
+                salarioEmpregado += empregado.GerarPagamento();
             }
             foreach  (Gerente gerente in Gerentes)
             {
-                salarioGerente += gerente.SalarioTotal + gerente.ValeAlimentacao - gerente.Aliquota;
+                salarioGerente += gerente.GerarPagamento();
             }
             double salarioTotal = salarioEmpregado + salarioGerente;
             Console.WriteLine("A folha salarial da empresa é de {0} Reais", salarioTotal);
-
-
+            
+            Console.ReadLine();
 
         }
     }

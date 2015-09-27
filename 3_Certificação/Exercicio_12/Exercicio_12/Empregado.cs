@@ -6,31 +6,40 @@ using System.Threading.Tasks;
 
 namespace Exercicio_12
 {
-    class Empregado : Funcionario
+    public class Empregado : Funcionario
     {
+        public Empregado()
+        {
+            Aliquota = 0.08;
+        }
         public double Salario { get; set; }
-        public override double ValeAlimentacao
-        {
-            get
-            {
-                if (Salario * (8 / 100) > 750)
-                {
-                    return 750;
-                }
-                return Salario * (8 / 100);
-            }
-            set { }
-        }
-        public override double Aliquota
-        {
-            get
-            {
-                return (Salario + ValeAlimentacao) * (8 / 100);
-            }
-            set
-            { }
-        }
-       
+        public const double valorMaxAlimentacao = 750;
+        protected double taxaConversao = 0.08;
 
+        
+        public double ValeAlimentacao
+        {
+            get
+            {
+                double valor = Salario*taxaConversao;
+                if (valor > valorMaxAlimentacao)
+                {
+                    return valorMaxAlimentacao;
+                }
+                return valor;
+            }
+        }
+        public double Aliquota { get; set; }
+
+        public virtual double GerarPagamento()
+        {
+            var salarioTotal = GetTotalSalario();
+            return salarioTotal - (salarioTotal*Aliquota);
+        }
+
+        protected virtual double GetTotalSalario()
+        {
+            return (Salario + ValeAlimentacao);
+        }
     }
 }

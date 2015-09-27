@@ -6,34 +6,18 @@ using System.Threading.Tasks;
 
 namespace Exercicio_12
 {
-    class Gerente : Empregado
+    public class Gerente : Empregado
     {
-        public string Area { get; set; }
-        public double ValorAd { get; set; }
-        public double SalarioTotal { get; set; }
-        public override double ValeAlimentacao
+        public Gerente()
         {
-            get
-            {
-                if (SalarioTotal * (8 / 100) > 750)
-                {
-                    return 750;
-                }
-                return SalarioTotal * (8 / 100);
-            }
-            set
-            { }
+            Aliquota = 0.065;
         }
-        public override double Aliquota
+
+       public string Area { get; set; }
+        public double ValorAd { get; set; }
+        protected override double GetTotalSalario()
         {
-            get
-            {
-                return SalarioTotal * ((13 / 2) / 100);
-            }
-
-            set
-
-            { }
+            return base.GetTotalSalario() + ValorAd;
         }
     }
 }
