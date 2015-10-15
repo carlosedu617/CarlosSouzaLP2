@@ -7,10 +7,11 @@ using MySql.Data.MySqlClient;
 
 namespace Aula_1310
 {
-    class ConectaBD
+    class BancoDeDados
+
     {
        
-        MySqlConnection conn = new MySqlConnection("Server = localhost ; Database = test ; uid = root ; pwd = ");
+        MySqlConnection conn = new MySqlConnection("Server = localhost ; Database = test ; uid = root ; pwd = cadu");
         MySqlCommand cmd = new MySqlCommand();
 
 
@@ -33,6 +34,7 @@ namespace Aula_1310
             MySqlDataReader reader = cmd.ExecuteReader();
             return reader;
         }
+
         public void FecharConexao()
         {
             conn.Close();
